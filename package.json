@@ -53,6 +53,7 @@
     "axios": "^0.16.2",
     "css-loader": "^0.28.7",
     "express": "^4.16.2",
+    "fatsecret": "^1.0.2",
     "file-loader": "^0.11.2",
     "history": "^4.7.2",
     "ls": "^0.2.1",
