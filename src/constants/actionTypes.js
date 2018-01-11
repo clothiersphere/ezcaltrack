@@ -1,0 +1,1 @@
+export const FOOD_SEARCH = 'FOOD_SEARCH';
