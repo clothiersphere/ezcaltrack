@@ -13,10 +13,12 @@ class App extends Component {
   }
 
   render() {
+    const { searchResults } = this.props;
+
     return (
       <div className="App">
         Header
-        <Body />
+        <Body {...searchResults} />
         Footer
       </div>
     );
@@ -24,12 +26,13 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state, "state")
   const {
-    food,
+    searchResults,
   } = state;
 
   return {
-    food,
+    searchResults,
   };
 }
 
