@@ -8,6 +8,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/foodSearch', fatSecret.foodSearch);
+app.get('/api/getFoodInfo', fatSecret.getFoodInfo);
+
+  // api/food/
+    // search/:term
+    // getInfo/:id
 
 app.listen(1234, () => {
   console.log('%s listening at %d', app.name, 1234);
