@@ -8,8 +8,8 @@ export default class Body extends Component {
   iterate(props) {
     const bleh = Object.keys(props).map((key, i) =>
       (
-        <div key={i}>
-          {props[key].food_name}
+        <div key={i} onClick={()=>console.log(props[key].food_id)}>
+          {props[key].food_name} {props[key].food_description}
         </div>
       ),
     );

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import Body from './Body';
+import Header from './Header';
 
 class App extends Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        Header
+        <Header />
         <Body {...searchResults} />
         Footer
       </div>
