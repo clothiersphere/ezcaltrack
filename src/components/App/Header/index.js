@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Dropdown, Icon, Menu, Segment } from 'semantic-ui-react';
+import HeaderMenu from './Menu';
 
 class Header extends Component {
   
   render() {
     return (
-      <div> Header2 </div>
+      <div className="Header"> 
+        <HeaderMenu />
+      </div>
     );
   }
 }
