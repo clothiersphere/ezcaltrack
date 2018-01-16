@@ -20,7 +20,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <Body {...searchResults} />
-        Footer
       </div>
     );
   }
