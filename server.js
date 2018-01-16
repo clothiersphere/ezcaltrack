@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
 
 app.get('/api/foodSearch', fatSecret.foodSearch);
 app.get('/api/getFoodInfo', fatSecret.getFoodInfo);
+app.get('/api/food/getInfo/:id', fatSecret.getFoodInfo);
+app.get('/api/food/search/:keyword', fatSecret.foodSearch);
 
   // api/food/
     // search/:term
