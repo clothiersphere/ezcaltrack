@@ -9,16 +9,14 @@ import Header from './Header';
 
 class App extends Component {
   componentDidMount() {
-    const { foodSearch } = this.props;
-    foodSearch();
   }
 
   render() {
-    const { searchResults } = this.props;
+    const { searchResults, foodSearch } = this.props;
 
     return (
       <div className="App">
-        <Header />
+        <Header foodSearch={foodSearch} />
         <Body {...searchResults} />
       </div>
     );
@@ -26,7 +24,6 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state, "state")
   const {
     searchResults,
   } = state;
