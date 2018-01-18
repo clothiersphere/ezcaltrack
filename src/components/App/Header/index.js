@@ -8,7 +8,7 @@ class Header extends Component {
     const { foodSearch } = this.props;
     return (
       <div className="Header">
-        <HeaderMenu {...foodSearch} />
+        <HeaderMenu {...{ foodSearch }} />
       </div>
     );
   }
