@@ -16,7 +16,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header foodSearch={foodSearch} />
+        <Header {...{ foodSearch }} />
         <Body {...searchResults} />
       </div>
     );
@@ -35,7 +35,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    foodSearch: () => dispatch(actions.foodSearch()),
+    foodSearch: (term) => dispatch(actions.foodSearch(term)),
   };
 }
 
