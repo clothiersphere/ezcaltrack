@@ -8,11 +8,11 @@ function showQueryResult(results) {
   };
 }
 
-export function foodSearch() {
+export function foodSearch(term) {
   return function (dispatch) {
     const request = axios({
       method: 'GET',
-      url: 'http://localhost:8080/api/foodSearch',
+      url: `http://localhost:8080/api/food/search/${term}`,
     });
     return request
       .then((response) => {
