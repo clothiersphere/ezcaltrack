@@ -3,12 +3,12 @@ import * as actionTypes from '../constants/actionTypes';
 
 function showQueryResult(results) {
   return {
-    type: actionTypes.FOOD_SEARCH,
+    type: actionTypes.GET_FOOD_SEARCH,
     results,
   };
 }
 
-export function foodSearch(term) {
+export function getFoodSearch(term) {
   return function (dispatch) {
     const request = axios({
       method: 'GET',

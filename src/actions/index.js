@@ -1,5 +1,5 @@
-import { foodSearch } from './foodSearch';
+import { getFoodSearch } from './getFoodSearch';
 
 export {
-  foodSearch,
+  getFoodSearch,
 };

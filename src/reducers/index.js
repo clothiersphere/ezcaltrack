@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import searchResults from './foodSearch';
+import foodSearchResults from './getFoodSearch';
 
 export default combineReducers({
-  searchResults,
+  foodSearchResults,
   routing: routerReducer,
 });
