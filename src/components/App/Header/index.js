@@ -5,10 +5,10 @@ class Header extends Component {
   componentDidMount() {
   }
   render() {
-    const { foodSearch } = this.props;
+    const { getFoodSearch } = this.props;
     return (
       <div className="Header">
-        <HeaderMenu {...{ foodSearch }} />
+        <HeaderMenu {...{ getFoodSearch }} />
       </div>
     );
   }
