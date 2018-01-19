@@ -9,7 +9,7 @@ class HeaderMenu extends Component {
 
   onSearchKeyDown(e) {
     if (e.key === 'Enter') {
-      this.props.foodSearch(this.state.term);
+      this.props.getFoodSearch(this.state.term);
     }
   }
 
