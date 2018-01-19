@@ -12,30 +12,30 @@ class App extends Component {
   }
 
   render() {
-    const { searchResults, foodSearch } = this.props;
-
+    const { foodSearchResults, getFoodSearch } = this.props;
     return (
       <div className="App">
-        <Header {...{ foodSearch }} />
-        <Body {...searchResults} />
+        <Header {...{ getFoodSearch }} />
+        <Body {...{ foodSearchResults }}  />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
+  console.log(state, "state")
   const {
-    searchResults,
+    foodSearchResults,
   } = state;
 
   return {
-    searchResults,
+    foodSearchResults,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    foodSearch: (term) => dispatch(actions.foodSearch(term)),
+    getFoodSearch: term => dispatch(actions.getFoodSearch(term)),
   };
 }
 
