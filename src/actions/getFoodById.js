@@ -12,7 +12,7 @@ export function getFoodById(id) {
   return function (dispatch) {
     const request = axios({
       method: 'GET',
-      url: `http://localhost:8080/api/food/getInfo/${id}`,
+      url: `http://localhost:8080/api/food/${id}`,
     });
     return request
       .then((response) => {
