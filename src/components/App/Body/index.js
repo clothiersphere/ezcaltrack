@@ -7,11 +7,17 @@ export default class Body extends Component {
     console.log(this, "body")
   }
   render() {
-    const { foodSearchResults } = this.props;
+    const { foodSearchResults, getFoodById, nutritionalInfo } = this.props;
     return (
       <div>
         <Switch>
-          <Route exact path="/" render={routeProps => <FoodSearchResults {...routeProps} foodSearchResults={foodSearchResults} />} />
+          <Route exact path="/" render={routeProps => 
+            <FoodSearchResults {...routeProps} 
+              foodSearchResults={foodSearchResults} 
+              getFoodById={getFoodById} 
+              nutritionalInfo={nutritionalInfo} 
+            />
+          } />
         </Switch>
       </div>
     );
