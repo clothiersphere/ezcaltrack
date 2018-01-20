@@ -16,14 +16,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header {...{ getFoodSearch }} />
-        <Body {...{ foodSearchResults }}  />
+        <Body {...{ foodSearchResults }} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state, "state")
   const {
     foodSearchResults,
   } = state;
@@ -36,6 +35,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getFoodSearch: term => dispatch(actions.getFoodSearch(term)),
+    getFoodById: id => dispatch(actions.getFoodById(id)),
   };
 }
 
