@@ -19,7 +19,8 @@ function convertFoodsSearchResults(array_) {
 
   const array = array_.map(entry => (
     {
-      text: `${entry.food_name} | ${entry.food_description}`,
+      // text: `${entry.food_name} | ${entry.food_description}`,
+      text: `${entry.food_name}`,
       value: `${entry.food_id}`,
     }
   ));
