@@ -5,30 +5,35 @@ import NutritionalDisplay from './NutritionalDisplay';
 
 
 export default class FoodSearchResults extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
-    let searchResults;
     const { foodSearchResults, getFoodById, nutritionalInfo } = this.props;
-    if (foodSearchResults.length > 0) {
+    let searchResultsDropDown = null;
+
+    if (foodSearchResults[0]) {
+      
       const handleChange = (e, data) => {
         getFoodById(data.value);
       };
 
-      searchResults = (
+      searchResultsDropDown = (
         <Dropdown
-          placeholder="Select result from list below" 
-          fluid 
+          placeholder="Select result from list below"
           selection
           closeOnChange
-          onChange={handleChange} 
-          options={foodSearchResults} />
+          onChange={handleChange}
+          options={foodSearchResults}
+        />
       );
-    } else {
-      searchResults = <div> bye </div>;
     }
+
     return (
       <div>
-        {searchResults}
-        <NutritionalDisplay nutritionalInfo={nutritionalInfo} />
+        {searchResultsDropDown}
+        <NutritionalDisplay {...{ nutritionalInfo }} />
       </div>
 
     );

@@ -12,23 +12,27 @@ class App extends Component {
   }
 
   render() {
-    const { foodSearchResults, getFoodSearch } = this.props;
+    const { foodSearchResults, getFoodSearch, getFoodById, nutritionalInfo } = this.props;
+    console.log(this.props, "APP")
     return (
       <div className="App">
         <Header {...{ getFoodSearch }} />
-        <Body {...{ foodSearchResults }} />
+        <Body {...{ foodSearchResults, getFoodById, nutritionalInfo }} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
+  console.log(state, "state")
   const {
     foodSearchResults,
+    nutritionalInfo,
   } = state;
 
   return {
     foodSearchResults,
+    nutritionalInfo,
   };
 }
 
@@ -36,6 +40,7 @@ function mapDispatchToProps(dispatch) {
   return {
     getFoodSearch: term => dispatch(actions.getFoodSearch(term)),
     getFoodById: id => dispatch(actions.getFoodById(id)),
+    createEntry: () => dispatch(actions.generateEntry()),
   };
 }
 
