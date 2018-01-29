@@ -29,7 +29,6 @@ const ServingSizeInfoDisplay = (data) => {
           <div className="nutritionFacts">
             Nutrition Facts
           </div>
-          <br />
           Serving Size: {Math.round(serving.metric_serving_amount)} {serving.metric_serving_unit}
           <div className="amountPerServing">
             Amount Per Serving
@@ -39,8 +38,39 @@ const ServingSizeInfoDisplay = (data) => {
             <div className="ampFat">
               Calories from Fat {Math.round(serving.fat * 9)}
             </div>
+            <div className="nutritionalInfo">
+              {serving.fat} 1%
+              <br />
+              {serving.saturated_fat} 1%
+              <br />
+              {serving.polyunsaturated_fat}
+              <br />
+              {serving.monounsaturated_fat}
+              <div className="cholesterol">
+                Cholesterol {serving.cholesterol}mg 1%
+              </div>
+              <div className="sodium">
+                Sodium {serving.sodium}mg
+              </div>
+              <div className="potassium">
+                Potassium {serving.potassium}mg
+              </div>
+              <div className="totalCarb">
+                Total Carbohydrate {serving.carbohydrate}g 1%
+                Dietary Fiber {serving.fiber}g 1%
+                Sugars {serving.sugar}
+              </div>
+              <div className="protein">
+                Protein {serving.protein}
+              </div>
+            </div>
+            <div className="vitamin">
+              Vitamin A {serving.vitamin_a}
+              Vitamin C {serving.vitamin_c}
+              Calcium {serving.calcium}
+              Iron {serving.iron}
+            </div>
           </div>
-
         </div>
       </div>
     );
