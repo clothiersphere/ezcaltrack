@@ -33,7 +33,7 @@ export default class FoodSearchResults extends Component {
 
     return (
       <div>
-        <SearchResultsDropdown {...{ foodSearchResults, getFoodById }}/>
+        <SearchResultsDropdown {...{ foodSearchResults, getFoodById } }/>
         <NutritionalDisplay {...{ nutritionalInfo }} />
       </div>
 
